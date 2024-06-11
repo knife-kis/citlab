@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head th:replace="~{fragments/header :: head}"></head>
+<body>
+<div class='preloader w-100 h-100 position-fixed'></div>
+<div th:replace="~{fragments/header :: header}"></div>
+<!-- Offcanvas Begin -->
+<div class="offcanvas-overlay fixed-top w-100 h-100"></div>
+<div class="offcanvas-wrapper bg-white fixed-top h-100">
+    <!-- Offcanvas Close Button Begin -->
+    <div class="offcanvas-close position-absolute">
+        <img src="assets/img/icons/close.svg" class="svg" alt="">
+    </div>
+    <!-- Offcanvas Close Button End -->
+    <!-- Offcanvas Content Begin -->
+    <div class="offcanvas-content">
+        <!-- About Widget Begin -->
+        <div class="widget widget_about">
+            <div class="widget-logo">
+                <img src="assets/img/logo.png" data-rjs="2" alt="">
+            </div>
+
+            <div class="about-content">
+                <p>Сайт испытательной лаборатории</p>
+            </div>
+        </div>
+        <!-- About Widget End -->
+        <!-- Flicker Widget Begin -->
+        <div class="widget widget_flicker"></div>
+        <!-- Flicker Widget End -->
+        <!-- Contact Widget Begin -->
+        <div class="widget widget_contact_info">
+            <!-- Widget Logo Begin -->
+            <div class="widget-title">
+                <h4>Get in touch</h4>
+            </div>
+            <!-- Widget Logo End -->
+            <!-- Widget Content Begin -->
+            <div class="info-content">
+                <div class="single-info">
+                    <span>Расположение офиса</span>
+                    <p>660041, Красноярский край, г. Красноярск, пр. Свободный дом 75, пом. 9, кабинет 12</p>
+                </div>
+                <div class="single-info">
+                    <span>Support mail</span>
+                    <p>
+                        <a href="mailto:Cit-krsk@yandex">Cit-krsk@yandex</a>
+                    </p>
+                </div>
+            </div>
+            <!-- Widget Content End -->
+        </div>
+        <!-- About Widget End -->
+        <!-- Offcanvas Button Begin -->
+        <div class="offcanvas-btn">
+            <a href="#" class="btn"><span>Get Appointment</span></a>
+        </div>
+        <!-- Offcanvas Button End -->
+    </div>
+    <!-- Offcanvas Content End -->
+</div>
+<!-- Offcanvas End -->
+<!-- Slider Begin -->
+<section class="banner section-pattern" data-bg-img="assets/img/section-pattern/slider-pattern.png">
+    <!-- Banner Slider Begin -->
+    <div class="banner-slider owl-carousel d-flex align-items-center justify-content-center"
+         data-owl-animate-in="fadeIn" data-owl-animate-Out="fadeOut" data-owl-autoplay="false" data-owl-dots="true">
+        <!-- Single Slide Begin -->
+        <div class="single-banner-slider">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <!-- Banner Content Begin -->
+                        <div class="banner-content">
+                            <h1><br>
+                                <span>Измерения</span> <br>
+                                физических факторов</h1>
+                            <p>
+                            <ul class="menu menu-ff">
+                                <li th:text="#{index.micr}"></li>
+                                <li th:text="#{index.ion}"></li>
+                                <li th:text="#{index.vib}"></li>
+                                <li th:text="#{index.vent}"></li>
+                                <li th:text="#{index.light}"></li>
+                            </ul>
+                            </p>
+                        </div>
+                        <!-- Banner Content End -->
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- Banner Content Begin -->
+                        <div class="banner-image mt-50 mt-lg-0 text-center text-lg-right">
+                            <img src="assets/img/banner/slider-1.png" data-rjs="2" alt="">
+                        </div>
+                        <!-- Banner Content End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Single Slide End -->
+        <!-- Single Slide Begin -->
+        <div class="single-banner-slider">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <!-- Banner Content Begin -->
+                        <div class="banner-content">
+                            <h1><span>Оценка</span> <br>
+                                радоноопасности и измерения гамма-излучения</h1>
+                            <p>Перед началом строительства зданий и сооружений на земельных участках мы проводим следующие исследования:
+                                </p>
+                            <li>Плотность потока радона.</li>
+                            <li>Мощность дозы гамма-излучения.</li>
+                            <li>Исследование почвы.</li>
+
+                        </div>
+                        <!-- Banner Content End -->
+                    </div>
+                    <div class="col-lg-6">
+                        <!-- Banner Content Begin -->
+                        <div class="banner-image mt-50 mt-lg-0 text-center text-lg-right">
+                            <img src="assets/img/banner/slider-2.png" data-rjs="2" alt="">
+                        </div>
+                        <!-- Banner Content End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Single Slide End -->
+    </div>
+    <!-- Banner Slider End -->
+</section>
+<!-- Slider End -->
+
+<!-- Modal Form Begin -->
+<div class="appointment-modal modal fade" id="appointmentModalForm" tabindex="1" role="dialog"
+     aria-labelledby="appointmentModalForm" aria-hidden="true">
+    <div class="modal-dialog d-flex align-items-center" role="document">
+        <div class="container">
+            <div class=" row justify-content-center">
+                <div class="col-lg-8 col-12">
+                    <!-- Modal Content Begin -->
+                    <div class="modal-content">
+                        <!-- Modal Close Button Begin -->
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <img src="assets/img/icons/close.svg" alt="">
+                        </button>
+                        <!-- End Modal Close End -->
+                        <!-- Appointment Form Begin -->
+                        <form action="#" method="POST" class="appointment-form">
+                            <h2 class="form-title">Request Appoinment</h2>
+                            <input class="theme-input-style" type="text" placeholder="Full Name">
+                            <input class="theme-input-style" type="email" placeholder="Email">
+                            <input class="theme-input-style" type="tel" placeholder="Phone">
+                            <select class="theme-input-style clearfix">
+                                <option value="" disabled="" selected="">Select purpose</option>
+                                <option value="01">Business</option>
+                                <option value="01">Consultancy</option>
+                            </select>
+                            <textarea class="theme-input-style" placeholder="Message"></textarea>
+
+                            <button class="btn" type="submit"><span>Send request</span></button>
+                        </form>
+                        <!-- End Appointment Form End -->
+                    </div>
+                    <!-- Modal Content End -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Form End -->
+
+<!-- Feature Begin -->
+<section class="pt-120 pb-90 section-pattern" data-bg-img="assets/img/section-pattern/feature-pattern.png">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-4 col-md-6">
+                <!-- Single Feature Begin -->
+                <div class="single-feature text-center">
+                    <!-- Feature Image Begin -->
+                    <div class="image">
+                        <img src="assets/img/feature/feature-1.png" data-rjs="2" alt="">
+                    </div>
+                    <!-- Feature Image End -->
+
+                    <!-- Feature Content Begin -->
+                    <div class="content">
+                        <h3>Опыт</h3>
+                        <p>Лаборатория располагает квалифицированным персоналом с опытом работы более 10 лет</p>
+                    </div>
+                    <!-- Feature Content End -->
+                </div>
+                <!-- Single Feature End -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <!-- Single Feature Begin -->
+                <div class="single-feature text-center">
+                    <!-- Feature Image Begin -->
+                    <div class="image">
+                        <img src="assets/img/feature/feature-2.png" data-rjs="2" alt="">
+                    </div>
+                    <!-- Feature Image End -->
+
+                    <!-- Feature Content Begin -->
+                    <div class="content">
+                        <h3>Оборудование</h3>
+                        <p>Лаборатория укомплектована всем необходимым оборудованием для проведения испытаний </p>
+                    </div>
+                    <!-- Feature Content End -->
+                </div>
+                <!-- Single Feature End -->
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <!-- Single Feature Begin -->
+                <div class="single-feature text-center">
+                    <!-- Feature Image Begin -->
+                    <div class="image">
+                        <img src="assets/img/feature/feature-3.png" data-rjs="2" alt="">
+                    </div>
+                    <!-- Feature Image End -->
+
+                    <!-- Feature Content Begin -->
+                    <div class="content">
+                        <h3>Гарантия качества</h3>
+                        <p>Лаборатория аккредитована в национальной системе Росаккредитация</p>
+                    </div>
+                    <!-- Feature Content End -->
+                </div>
+                <!-- Single Feature End -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Feature End -->
+
+<!-- Testimonial Begin -->
+<section class="pt-120 pb-120 section-pattern" data-bg-img="assets/img/section-pattern/testimonial-pattern.png">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <!-- Section Title Begin -->
+                <div class="section-title text-center">
+                    <h3>Об</h3>
+                    <h2>Испытательной лаборатории</h2>
+                    <p th:text="#{index.about}"></p>
+                </div>
+                <!-- Section Title End -->
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Testimonial End -->
+<div th:replace="~{fragments/footer :: footer}"></div>
+<script src="assets/js/jquery.min.js"></script> <!-- TODO Переписать на th:src и протекстирвовать-->
+<script th:src="@{/js/bootstrap.bundle.min.js}"></script>
+<script src="assets/js/menu.min.js"></script>
+<script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+<script src="assets/plugins/waypoints/jquery.counterup.min.js"></script>
+<script src="assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+<script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+<script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+<script src="assets/plugins/countdown/countdown.min.js"></script>
+<script src="assets/plugins/retinajs/retina.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjkssBA3hMeFtClgslO2clWFR6bRraGz0"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/custom.js"></script>
+</body>
+</html>

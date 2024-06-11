@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/header :: head}"></head>
+
+<body>
+    <!-- Preloader Begin -->
+    <div class='preloader w-100 h-100 position-fixed'></div>
+    <!-- Preloader End -->
+
+    <head th:replace="~{fragments/header :: header}"></head>
+
+    <!-- Offcanvas Begin -->
+    <div class="offcanvas-overlay fixed-top w-100 h-100"></div>
+    <div class="offcanvas-wrapper bg-white fixed-top h-100">
+        <!-- Offcanvas Close Button Begin -->
+        <div class="offcanvas-close position-absolute">
+            <img src="assets/img/icons/close.svg" class="svg" alt="">
+        </div>
+        <!-- Offcanvas Close Button End -->
+
+        <!-- Offcanvas Content Begin -->
+        <div class="offcanvas-content">
+            <!-- About Widget Begin -->
+            <div class="widget widget_about">
+                <div class="widget-logo">
+                    <img src="assets/img/logo.png" data-rjs="2" alt="">
+                </div>
+            </div>
+            <!-- About Widget End -->
+
+            <!-- Flicker Widget Begin -->
+            <div class="widget widget_flicker">
+                <!-- Widget Logo Begin -->
+                <div class="widget-title">
+                    <h4>Latest Shots</h4>
+                </div>
+                <!-- Widget Logo End -->
+
+                <ul class="d-flex flex-wrap">
+                    <li><a href="#"><img src="assets/img/flicker/f1.png" data-rjs="2" alt=""></a></li>
+                    <li><a href="#"><img src="assets/img/flicker/f2.png" data-rjs="2" alt=""></a></li>
+                    <li><a href="#"><img src="assets/img/flicker/f3.png" data-rjs="2" alt=""></a></li>
+                    <li><a href="#"><img src="assets/img/flicker/f4.png" data-rjs="2" alt=""></a></li>
+                    <li><a href="#"><img src="assets/img/flicker/f5.png" data-rjs="2" alt=""></a></li>
+                    <li><a href="#"><img src="assets/img/flicker/f6.png" data-rjs="2" alt=""></a></li>
+                </ul>
+            </div>
+            <!-- Flicker Widget End -->
+            <!-- Contact Widget Begin -->
+            <div class="widget widget_contact_info">
+                <!-- Widget Logo Begin -->
+                <div class="widget-title">
+                    <h4>Get in touch</h4>
+                </div>
+                <!-- Widget Logo End -->
+            </div>
+            <!-- About Widget End -->
+            <!-- Offcanvas Button Begin -->
+            <div class="offcanvas-btn">
+                <a href="#" class="btn"><span>Get Appointment</span></a>
+            </div>
+            <!-- Offcanvas Button End -->
+        </div>
+        <!-- Offcanvas Content End -->
+    </div>
+    <!-- Page Title Begin -->
+    <section class="page-title-bg pt-250 pb-100" data-bg-img="assets/img/section-pattern/page-title.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title text-center">
+                        <h2 th:text="#{service.title}"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- Service Details Begin -->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 order-last order-lg-first">
+                    <!-- Sidebar Begin -->
+                    <aside class="sidebar mt-5 mt-lg-0">
+                        <!-- Widget Categories Begin -->
+                        <div class="widget widget_categories">
+                            <div class="widget-title">
+                                <h4>Виды услуг</h4>
+                            </div>
+                            <ul>
+                                <li><a href="#vvod" th:text="#{service.exploitation}"></a></li>
+                                <li><a href="#rad">Радиоционный контроль</a></li>
+                            </ul>
+                        </div>
+                        <!-- Widget Related Post Begin -->
+                        <div class="widget widget_related_post"></div>
+                        <!-- Widget Related Post End -->
+                    </aside>
+                    <!-- Sidebar End -->
+                </div>
+
+                <div class="col-lg-8">
+                    <!-- Service Details Begin -->
+                    <div class="service-details">
+                        <h3 class="title mb10" Style="margin-bottom: 25px" th:text="#{service.exploitation}"><a name="vvod"></a></h3>
+                        <p Style="margin-bottom: 0">Согласно статье 55 Градостроительного кодекса, ввод в эксплуатацию объектов строительства невозможен
+                            без проведения комплексных лабораторных исследований. Инструментальные и лабораторные методы исследований позволяют
+                            выявить и устранить существующие дефекты и нарушения, которые могут быть вызваны низким качеством работ,
+                            несоответствием проектной документации, а также ошибками архитекторов и проектировщиков.
+
+                            Лабораторные исследования проводятся в соответствии с санитарно-эпидемиологическими правилами и требованиями
+                            Государственного архитектурно-строительного надзора (ГАСН). К основным видам лабораторно-инструментальных работ относятся:
+						</p>
+						
+						</br>
+					
+						<h4 Style="margin-top: 16px; margin-bottom: 16px">Исследование микроклимата </h4>
+						<p Style="margin-bottom: 0">
+						<ul class="menu menu-ff">
+                                <li>Температура воздушной среды;</li>
+                                <li>Влажность в помещениях;</li>
+                                <li>Скорость движения воздуха;</li>
+                                <li>Результирующая температура;</li>
+                                <li>Температура поверхности;</li>
+                                <li>Кратность воздухообмена (производительность вент. систем).</li>
+								</ul>
+								</br>
+						<h4 Style="margin-top: 16px; margin-bottom: 16px">Радиологические исследования </h4>
+						<p Style="margin-bottom: 0">
+						<ul class="menu menu-ff">
+                                <li>Среднегодовая эквивалентная равновесная объемная активность дочерних продуктов радона (далее – ЭРОА радона) в воздухе помещений;</li>
+                                <li>Мощность эффективной дозы гамма-излучения (далее – МЭД гамма-излучений) внутри зданий;</li>
+                                <li>Измерения МЭД гамма-излучений от приборов учета холодного и горячего водоснабжения.</li>
+								</ul>
+					
+						</br>
+						<h4 Style="margin-top: 16px; margin-bottom: 16px">Защита от шума </h4>
+						<p Style="margin-bottom: 0">
+						<ul class="menu menu-ff" >
+                                <li>Измерение индекса изоляции воздушного шума ограждающих конструкций;</li>
+                                <li>Измерение индекса приведенного уровня ударного шума перекрытий;</li>
+                                <li>Измерение шума (уровни звука, уровни звукового давления).</li>
+								</ul>
+									</br>			
+						<h4 Style="margin-top: 16px; margin-bottom: 16px">Дополнительные исследования </h4>
+						<p Style="margin-bottom: 0">
+						<ul class="menu menu-ff" >
+                                <li>Коэффициент естественной освещенности;</li>
+                                <li>Уровень искусственной освещенности;</li>
+                                <li>Коэффициент пульсации;</li>
+                                <li>Уровень ослабления геомагнитного поля;</li>
+                                <li>Уровень напряженности электростатического поля;</li>
+                                <li>Уровень напряженности электромагнитного поля;</li>
+                                <li>Измерения уровня вибрации;</li>
+                                <li>Исследование холодной и горячей воды из внутреннего водопровода;</li>
+                                <li>Концентрация химических веществ в воздухе.</li>
+								</ul>
+						
+						
+						</p>
+
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <p>.</p>
+                            </div>
+                            <!-- Single Related Post End <div class="col-md-6">
+                                <img src="assets/img/service-details.jpg" data-rjs="2" alt="">
+                            </div>-->
+                        </div>
+
+						<div>
+						<h2 class="title" Style="margin-bottom: 25px"><a name="rad"></a>Радиационный контроль</h2>
+						<h4 Style="margin-top: 16px; margin-bottom: 16px">Цели и задачи исследований</h4>
+						
+                        <p Style="margin-bottom: 0">
+						Основная задача, на выполнение которой направлен радиационный контроль, это предотвращение облучения людей. 
+						Цели и задачи контроля указаны в соответствующих нормативных актах (согласно СанПиН 2.1.3684-21. п.122  "Радиационный контроль почвы на соответствие гигиеническим нормативам проводится
+в каждом случае строительства зданий и сооружений".)
+						<br>Радиационный контроль преследует такие цели, как: 
+						<ul class="menu menu-ff">
+                                <li>Мониторинг радиационной обстановки на предприятиях;</li>
+                                <li>Проверка соблюдения принципов радиационной безопасности и требований нормативов;</li>
+                                <li>Получение информации о радиационной обстановке на жилых объектах;</li>
+                        </p> </div>
+                        </br>
+						<div> <h4 Style="margin-top: 16px; margin-bottom: 16px">Виды работ</h4>
+						
+						
+						<ul class="menu menu-ff">
+                                <li>Гамма-поиск;</li>
+                                <li>Замеры мощности эквивалентной дозы внешнего гамма-излучения (МЭД) и маршрутная гамма-съемка открытой территории;</li>
+                                <li>Измерение плотности потока радона (ППР);</li>
+                                <li>Определение эквивалентной равновесной объемной активности изотопов радона и торона в воздухе (ЭРОА)</li> </ul>
+                        </p>
+						</div>
+						</br>
+						<div> <h4 Style="margin-top: 16px; margin-bottom: 16px">Гамма-поиск в здании и на участке</h4>
+						
+						<p> Перед тем как приступить к проведению измерений (гамма-съемке), проводится процедура гамма-поиска. 
+						На этом этапе специалисты определяют маршруты поиска, необходимое количество точек наблюдения, 
+						которое подбирается в зависимости от площади участка и особенностей его рельефа.</li>
+                        </p>
+						</div>
+</br>						
+						<div>
+						<h4 Style="margin-top: 16px; margin-bottom: 16px">Гамма-съемка в здании и на территории застройки</h4>
+						
+						<p> Этот анализ проводится в обязательном порядке по окончании строительства. Застройщик должен организовать проверку объекта, 
+					    без этого он не получит соответствующее разрешение и не сможет ввести объект в эксплуатацию. 
+						В первую очередь проверяется уровень гамма-излучения.</li>
+                        </p>
+						</div>
+						</br>
+						<div> <h4 Style="margin-top: 16px; margin-bottom: 16px">Плотность потока радона (ППР)</h4>
+						
+						<p Style="margin-bottom: 0"> Важный вид исследования – плотность потока радона (ППР) с поверхности грунта (на открытой территории).
+						Радон – это опасный для человека радиоактивный газ, который, как правило, образуется на большой глубине и выходит на поверхность почвы.
+						Газ, лишенный какого-либо запаха и цвета, легко и довольно быстро смешивается с воздухом и поступает в организм через дыхательные пути. 
+						Также важно отметить, что радон имеет способность накапливаться в организме, и практически не выводится из него, в этом заключается его главная опасность, 
+						поскольку в больших количествах он приводит к развитию тяжелых заболеваний.
+						Проведение радиационного контроля предполагает точное измерение имеющейся плотности потока радона, исходящего с поверхности грунта, которое проводит наша лаборатория. Это может понадобиться:</li>
+                        <ul class="menu menu-ff">
+                                <li>Если планируется возведение здания на новом участке – сначала нужно убедиться, что нет заражения грунта;</li>
+                                <li>При необходимости реконструкции построенных объектов. Такая проверка позволяет вовремя выявить проблему и разработать меры по защите.</li>
+                        </ul>
+						</p>
+						</div>
+						</br>
+						<div> <h4 Style="margin-top: 16px; margin-bottom: 16px" >Измерение концентрации радона в воздухе (ЭРОА)</h4>
+						
+						<p> Радиоактивный газ радон может содержаться в воздухе. Поэтому необходима соответствующая проверка – она проводится в описанных выше случаях. 
+						Специалисты нашей лаборатории прибывают на объект, устанавливают специальное оборудование и проводят измерения в соответствии с принятой 
+						методикой определения эквивалентной равновесной объемной активности (ЭРОА) изотопов радона и торона в воздухе. Результаты этих измерений в дальнейшем отражаются в отчете.</li>
+                        </p>
+						</div>
+						
+                        
+                    </div>
+                    <!-- Service Details End -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Service details End -->
+    <!-- Footer Begin -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+    <!-- Footer End -->
+
+    <!-- ======= jQuery Library ======= -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/menu.min.js"></script>
+    <script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/plugins/waypoints/jquery.counterup.min.js"></script>
+    <script src="assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/plugins/countdown/countdown.min.js"></script>
+    <script src="assets/plugins/retinajs/retina.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjkssBA3hMeFtClgslO2clWFR6bRraGz0"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+
+</html>

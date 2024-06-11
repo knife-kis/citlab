@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<body>
+<footer class="footer bg-light section-pattern footer-bg" data-bg-img="assets/img/section-pattern/footer-pattern.png">
+    <div class="footer-top pt-60">
+        <div class="container border-bottom">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="widget widget_contact_info">
+                        <div class="widget-logo">
+                            <img src="assets/img/footer_logo.png" data-rjs="2" alt="">
+                        </div>
+                        <div class="info-content">
+                            <div class="single-info">
+                                <span>Расположение офиса</span>
+                                <p>г. Красноярск, <br> пр. Свободный д. 75, пом. 9, кабинет 12</p>
+                            </div>
+                            <div class="single-info">
+                                <span>Рабочий телефон</span>
+                                <p><a href="tel:+73912440310">+7(391)244-03-10</a></p>
+                            </div>
+                            <div class="single-info single-info-bottom">
+                                <span>Электронная почта</span>
+                                <p><a href="mailto:Cit-krsk@yandex.ru">Cit-krsk@yandex.ru</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-sm-6">
+                    <div class="widget widget_nav_menu">
+                        <div class="widget-title">
+                            <h4>Навигация</h4>
+                        </div>
+                        <ul class="menu">
+                            <li><a th:href="@{/}">Главная</a></li>
+                            <li><a th:href="@{/service-details}">Услуги</a></li>
+                            <li><a th:href="@{/contact}">Контакты</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="copyright-text text-center">
+                        <span>&copy; Центр исследовательских технологий, 2023.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head th:replace="~{fragments/header :: head}"></head>
+<body>
+    <div class='preloader w-100 h-100 position-fixed'></div>
+    <div th:replace="~{fragments/header :: header}"></div>
+    <!-- Offcanvas Begin -->
+    <div class="offcanvas-overlay fixed-top w-100 h-100"></div>
+    <div class="offcanvas-wrapper bg-white fixed-top h-100">
+        <!-- Offcanvas Close Button Begin -->
+        <div class="offcanvas-close position-absolute">
+            <img src="assets/img/icons/close.svg" class="svg" alt="">
+        </div>
+        <!-- Offcanvas Close Button End -->
+        <!-- Offcanvas Content Begin -->
+        <div class="offcanvas-content">
+            <!-- About Widget Begin -->
+            <div class="widget widget_about">
+                <div class="widget-logo">
+                    <img src="assets/img/logo.png" data-rjs="2" alt="">
+                </div>
+
+                <div class="about-content">
+                    <p>Сайт испытательной лаборатории</p>
+                </div>
+            </div>
+            <!-- About Widget End -->
+            <!-- Contact Widget Begin -->
+            <div class="widget widget_contact_info">
+                <!-- Widget Content Begin -->
+                <div class="info-content">
+                    <div class="single-info">
+                        <span th:text="#{contact.officeLocation}"></span>
+                        <p th:text="#{contact.address}"></p>
+                    </div>
+                    <div class="single-info">
+                        <p>
+                            <a th:text="#{contact.email}"></a>
+                        </p>
+                    </div>
+                </div>
+                <!-- Widget Content End -->
+            </div>
+            <!-- About Widget End -->
+        </div>
+        <!-- Offcanvas Content End -->
+    </div>
+    <!-- Offcanvas End -->
+    <!-- Page Title Begin -->
+    <section class="page-title-bg pt-250 pb-100" data-bg-img="assets/img/section-pattern/page-title.png">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title text-center">
+                        <h2 th:text="#{contact.contact}"></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Page Title End -->
+    <!-- Contact Info Begin -->
+    <section class="pt-120 pb-120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <!-- Contact Info Begin -->
+                    <div class="contact-info">
+                        <h3 th:text="#{contact.contact.inform}"></h3>
+                        <p th:text="#{contact.cit.name}"></p>
+                        <div class="row">
+                            <!-- Single Contact Info -->
+                            <div class="col-sm-6 col-lg-12 single-contact-info media align-items-center">
+                                <div class="image">
+                                    <img src="assets/img/icons/locationmap.svg" class="svg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <h4 th:text="#{contact.address.name}"></h4>
+                                    <p th:text="#{contact.address}"></p>
+                                </div>
+                            </div>
+                            <!-- End Single Contact Info -->
+                            <!-- Single Contact Info -->
+                            <div class="col-sm-6 col-lg-12 single-contact-info media align-items-center">
+                                <div class="image">
+                                    <img src="assets/img/icons/12.svg" class="svg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <h4 th:text="#{contact.tel}"></h4>
+                                    <p th:text="#{contact.tel.number}"></p>
+                                </div>
+                            </div>
+                            <!-- End Single Contact Info -->
+                            <!-- Single Contact Info -->
+                            <div class="col-sm-6 col-lg-12 single-contact-info media align-items-center">
+                                <div class="image">
+                                    <img src="assets/img/icons/email.svg" class="svg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <h4>Email</h4>
+                                    <p th:text="#{contact.email}"></p>
+                                </div>
+                            </div>
+                            <!-- End Single Contact Info -->
+                            <!-- Single Contact Info -->
+                            <div class="col-sm-6 col-lg-12 single-contact-info media align-items-center">
+                                <div class="image">
+                                    <img src="assets/img/icons/time-svgrepo-com.svg" class="svg" alt="">
+                                </div>
+                                <div class="media-body">
+                                    <h4 th:text="#{contact.time}"></h4>
+                                    <p th:text="#{contact.time.day}"><br th:text="#{contact.time.day2}"> </p>
+                                </div>
+                            </div>
+                            <!-- End Single Contact Info -->
+                        </div>
+                    </div>
+                    <!-- Contact Info End -->
+                </div>
+                <div class="col-lg-8">
+                    <!-- Contact Form Begin -->
+                    <div class="contact-form-wrapper">
+                        <h3 th:text="#{contact.officeLocation}"></h3>
+                        <p></p>
+                        <div class="image">
+                            <img src="assets/img/map.png" class="png" alt=""></div>
+                    </div>
+                    <!-- Contact Form End -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Info End -->
+    <!-- Footer Begin -->
+    <div th:replace="~{fragments/footer :: footer}"></div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/menu.min.js"></script>
+    <script src="assets/plugins/waypoints/jquery.waypoints.min.js"></script>
+    <script src="assets/plugins/waypoints/jquery.counterup.min.js"></script>
+    <script src="assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+    <script src="assets/plugins/isotope/isotope.pkgd.min.js"></script>
+    <script src="assets/plugins/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="assets/plugins/countdown/countdown.min.js"></script>
+    <script src="assets/plugins/retinajs/retina.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjkssBA3hMeFtClgslO2clWFR6bRraGz0"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/custom.js"></script>
+</body>
+</html>
