@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Скопируйте JAR файл в рабочий каталог
-COPY target/сшедфи-0.0.1-SNAPSHOT.jar app.jar
+COPY target/citlab-0.0.1-SNAPSHOT.jar app.jar
 
 # Установите порт, который будет использоваться приложением
 EXPOSE 8081
