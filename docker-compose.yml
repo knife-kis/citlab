@@ -1,4 +1,5 @@
-version: '3'
+version: '3.8'
+
 services:
   app:
     build: .
@@ -8,18 +9,22 @@ services:
       SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/oriongw8_bd
       SPRING_DATASOURCE_USERNAME: oriongw8_bd
       SPRING_DATASOURCE_PASSWORD: Citsv75
-      depends_on:
-        - mysql
+    depends_on:
+      - mysql
+    entrypoint: ["sh", "-c", "echo 'Waiting for MySQL to start...' && sleep 10 && java -jar app.jar"]
+
 
   mysql:
-    image: mysql:8
+    image: mysql:8.0
     environment:
-      - MYSQL_DATABASE=oriongw8_bd
-      - MYSQL_ROOT_PASSWORD=Citsv75
+      MYSQL_DATABASE: oriongw8_bd
+      MYSQL_ROOT_PASSWORD: Citsv75
+      MYSQL_USER: oriongw8_bd
+      MYSQL_PASSWORD: Citsv75
     ports:
-      - "3306:3306"
+      - "3006:3306"
     volumes:
       - mysql-data:/var/lib/mysql
 
-  volumes:
-    mysql-data:
+volumes:
+  mysql-data:

@@ -1,5 +1,5 @@
 # Используйте официальный образ OpenJDK в качестве базового образа
-FROM openjdk:11-jre-slim
+FROM openjdk:11-jdk-slim
 
 # Установите рабочий каталог внутри контейнера
 WORKDIR /app
