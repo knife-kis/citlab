@@ -1,23 +1,18 @@
 package ru.citlab24.citlab.controllers;
 
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.citlab24.citlab.entities.User;
-import ru.citlab24.citlab.services.UsersService;
+import ru.citlab24.citlab.services.impl.UsersServiceImpl;
 
-import java.util.Map;
-
+@AllArgsConstructor
 @Controller
 @RequestMapping("/users")
 public class UsersController {
-    private UsersService usersService;
-
-    @Autowired
-    public UsersController(UsersService usersService) {
-        this.usersService = usersService;
-    }
+    private UsersServiceImpl usersService;
 
     @GetMapping("/add")
     public String showAddForm() {

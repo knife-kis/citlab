@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.stereotype.Repository;
 import ru.citlab24.citlab.entities.User;
 
-@Repository
+
 public interface UsersRepository extends JpaRepository<User, Long>, JpaSpecificationExecutor<User> {
 }
